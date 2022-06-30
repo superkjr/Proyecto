@@ -50,7 +50,7 @@ public class sesionA extends HttpServlet {
                     Logger.getLogger(sesionA.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 if(respt!=0){
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("VistaPrincipal.jsp");
            } else{
                     response.sendRedirect("InicioSesion.jsp?respt="+respt);
                 }

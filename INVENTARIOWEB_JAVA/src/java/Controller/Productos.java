@@ -55,17 +55,23 @@ protected void listaProducto(HttpServletRequest request, HttpServletResponse res
          
          
          /*
-         System.out.println("La opcion es: " + estado);
+         System.out.println("La opcion es: " + estado);                                               String estado = request.getParameter("opcion");
+    String id_pro = request.getParameter("id");
+    String nombre_pro = request.getParameter("nombre");
+    String stock_pro = request.getParameter("stock");
+    String precio_pro = request.getParameter("precio");
+    String unidadM = request.getParameter("unidad");
+    String estado_pro = request.getParameter("estado");
          System.out.println("El ID es: " + id_cat);
          System.out.println("El nombre es: " + nombre_cat);
          System.out.println("El estado es. " + estado_cat);
-         */
+         */                                                              
     
          if(estado.equals("listar")){
              this.listaProducto(request, response);
          }else if(estado.equals("editar")){
              System.out.println("Editando Producto....");
-             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/EditCat.jsp?id="+id_pro+"&&nombre="+nombre_pro+"&&estado="+estado_pro);
+             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/EditarPro.jsp?id="+id_pro+"&&nombre="+nombre_pro+"&&estado="+estado_pro);
              dispatcher.forward(request, response);
          }else if(estado.equals("eliminar")){
              System.out.println("Baja de Producto...");
@@ -77,7 +83,7 @@ protected void listaProducto(HttpServletRequest request, HttpServletResponse res
              RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
              dispatcher.forward(request, response);
          }else{
-             
+              request.getRequestDispatcher("crearProducto.jsp").forward(request, response);   
          }
          
     }
@@ -93,10 +99,9 @@ protected void listaProducto(HttpServletRequest request, HttpServletResponse res
         producto.setNom_producto(request.getParameter("txtNom_producto"));
         producto.setStock(Integer.parseInt(request.getParameter("txtStock")));
         producto.setPrecio(Integer.parseInt(request.getParameter("txtPrecio")));
-        producto.setUnidadMedida(request.getParameter("txtUnidad"));
+        producto.setUnidadMedida(request.getParameter("txtUnidadMedida"));
         producto.setEstado(Integer.parseInt(request.getParameter("txtEstado")));
-       
-      
+    
         ProductosDAO guardarProducto = new ProductoDAOImplementar();
         guardarProducto.guardarPro(producto);
         this.listaProducto(request, response);
