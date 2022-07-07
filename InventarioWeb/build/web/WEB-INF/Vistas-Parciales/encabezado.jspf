@@ -2,23 +2,29 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 
+<style>
+    body{
+        font-size: 17px;
+    }
+</style>
 
-
-<nav class="navbar navbar-expand-lg" style="background-color: 	#e6e6fa; ">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <!--<a class="navbar-brand" href="#">Navbar</a>-->
         <img src="./image/pngwing.com.png" alt="" width="50" height="60"><strong style="color: blue;">&nbsp;Inventario 2022</strong> 
 
-        <div class="collapse navbar-collapse d-grid gap-5 d-md-flex justify-content-md-end" id="navbarNav">
+    <div  class="collapse navbar-collapse d-grid gap-5 d-md-flex justify-content-md-end" id="navbarNav">
             <ul class="navbar-nav">
+                
+                
+                
+                
+                
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="Index">&nbsp;</a>
+                    <a class="nav-link active" aria-current="page" href="PrincipalL.jsp">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="VistaPrincipal.jsp">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Categorias?opcion=listar">Categorias</a>
+                    <a  class="nav-link" href="Categorias?opcion=listar">Categorias</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Producto.do?opcion=listar">Productos</a>
@@ -31,7 +37,18 @@
                         <li class="nav-item dropdown"><a class="dropdown-item" href="#">Perfil</a></li>
                         <li class="nav-item dropdown"><a class="dropdown-item" href="#">Seguridad</a></li>
                         <li class="nav-item dropdown"><hr class="dropdown-divider"></li>
-                        <li class="nav-item dropdown"><a class="dropdown-item" href="InicioSesion.jsp" id="closesesion" name="closesesion" onclick="salir();">Cerrar</a></li>
+                        <li class="nav-item dropdown"><a class="dropdown-item" href="Salir.do" id="closesesion" name="closesesion" onclick="salir();">Cerrar</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Reportes PDF
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li class="nav-item dropdown"><a class="dropdown-item" href="./ReportePDF/ReporteCat.jsp">Reporte Categoria</a></li>
+                        <li class="nav-item dropdown"><a class="dropdown-item" href="./ReportePDF/ReporteProducto.jsp">Reporte Producto</a></li>
+                        <li class="nav-item dropdown"><hr class="dropdown-divider"></li>
+                        <li class="nav-item dropdown"><a class="dropdown-item" href="Salir.do" id="closesesion" name="closesesion" onclick="salir();">Cerrar</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

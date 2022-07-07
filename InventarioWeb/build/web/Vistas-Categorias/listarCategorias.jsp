@@ -15,9 +15,28 @@
     </head>
     <body>
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-        <a href="Report.jsp">Crear Reporte</a>
-        <div style="width: 600px; margin: auto; color: white;">
+        <style>
+            body{
+                background-image: url(./image/fondo7.png);
+            }
+            tr{
+                color: white;
+               font-size: 20px;
+               font-family: cursive;
+            }
+            h3{
+                font-family: cursive;
+                text-align: center;
+            }
+            
+            .table-center{
+                padding-top: 90px;
+            }
+        </style>
+      
+        <div class="table-center" style="width: 800px; margin: auto; color: white;">
             <a href="<%= request.getContextPath()%>/Categorias?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicom-pencil" role="button"> Nueva Categoria</a>
+            <a class="btn btn-success btn-sm glyphicon glyphicom-pencil" href="./ReportePDF/ReporteCat.jsp">Reporte Categoria</a>
             <h3>Listado de Categorias Registradas</h3>
             <table  class="table table-striped">
                 <tr>

@@ -45,8 +45,8 @@ public class CategoriaDAOImplementar implements CategoriaDAO {
 
     @Override
     public Categoria editarCat(int id_cat_edit) {
-       this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
-       Categoria categoria = new Categoria();
+        this.conn = FactoryConexionDB.open(FactoryConexionDB.MySQL);
+        Categoria categoria = new Categoria();
         StringBuilder miSQL = new StringBuilder();
         miSQL.append("SELECT * FROM tb_categoria WHERE id_categoria = ").append(id_cat_edit);
         List<Categoria> lista = new ArrayList<Categoria>();

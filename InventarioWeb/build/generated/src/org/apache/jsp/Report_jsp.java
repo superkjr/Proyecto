@@ -56,9 +56,9 @@ public final class Report_jsp extends org.apache.jasper.runtime.HttpJspBase
  /*Parametros para realizar la conexión*/ 
 Connection conexion; 
 Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_inventario","root","");
+conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_inventario?zeroDateTimeBehavior=convertToNull","root","");
 /*Establecemos la ruta del reporte*/ 
-File reportFile = new File(application.getRealPath("ReportePDF/Rproducto.jasper")); 
+File reportFile = new File(application.getRealPath("ReportePDF/REPORTE.jasper")); 
 /* No enviamos parámetros porque nuestro reporte no los necesita asi que escriba 
 cualquier cadena de texto ya que solo seguiremos el formato del método runReportToPdf*/ 
 Map parameters = new HashMap(); parameters.put("Nombre_parametro", "Valor_Parametro"); 

@@ -16,7 +16,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
     <body>
-        <form action="sesionA.do" method="post">
+        <form action="Login.do" method="post">
             <section class="vh-100" background="">
                 <div class="container py-5 h-100" >
                     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -32,7 +32,7 @@
 
 
                                     <div class="form-outline mb-4">
-                                        <input name="txtEmail" style="background: transparent;border: 1; color: white;" type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Ingrese su Email"/>
+                                        <input name="txtEmail" style="background: transparent;border: 1; color: white;" type="Email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Ingrese su Email"/>
                                         <label class="form-label" for="typeEmailX-2">Gmail</label>
                                     </div>
 

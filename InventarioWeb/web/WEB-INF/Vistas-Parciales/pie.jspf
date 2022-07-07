@@ -1,7 +1,16 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 </div>
-<div class="pie">
-        &COPY; Armando Minero, Kevin Ricardo Melvin Antonio
-</div>
+
+<style>
+    footer{
+        width: 100%;
+        bottom: 0;
+        position:fixed;
+    }
+</style>
+<footer class="text-center p-3" style="background-color: black;">
+    <p></p>
+    <p class="text-white">© 2022 Copyright: Armando Minero, Kevin Ricardo, Melvin Antonio</p>
+</footer>
 </div>

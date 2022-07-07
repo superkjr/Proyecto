@@ -15,7 +15,7 @@ import java.util.List;
 public interface ProductosDAO {
     public List<Producto> Lista();
     public List<Producto> Lista2();
-    public Producto editarPro(int id_pro_edit);
+    public Producto editarPro(double id_pro_edit);
     public boolean guardarPro(Producto producto);
     public boolean borrarPro(int id_pro_borrar);
 }

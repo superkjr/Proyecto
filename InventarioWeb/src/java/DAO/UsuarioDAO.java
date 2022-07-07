@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package DAO;
+
 import Model.Usuario;
 import java.util.ArrayList;
 
@@ -14,4 +15,7 @@ import java.util.ArrayList;
 public interface UsuarioDAO {
     public ArrayList<Usuario> startSesion(String usuario, String clave);
      public boolean guardarUsu(Usuario usuario);
+     
+     
+
 }

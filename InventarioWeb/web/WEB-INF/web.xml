@@ -88,6 +88,18 @@
         <servlet-name>InicioSe</servlet-name>
         <servlet-class>Controller.InicioSe</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ActualizarProductos</servlet-name>
+        <servlet-class>Controller.ActualizarProductos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RecuperarC</servlet-name>
+        <servlet-class>Controller.RecuperarC</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ActualizarPro</servlet-name>
+        <servlet-class>Controller.ActualizarPro</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
         <url-pattern>/Index</url-pattern>
@@ -175,6 +187,18 @@
     <servlet-mapping>
         <servlet-name>InicioSe</servlet-name>
         <url-pattern>/InicioSe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActualizarProductos</servlet-name>
+        <url-pattern>/ActualizarProductos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RecuperarC</servlet-name>
+        <url-pattern>/RecuperarC.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActualizarPro</servlet-name>
+        <url-pattern>/ActualizarPro.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

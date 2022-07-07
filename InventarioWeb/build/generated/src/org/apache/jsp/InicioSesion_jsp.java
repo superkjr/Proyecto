@@ -55,7 +55,7 @@ public final class InicioSesion_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <form action=\"sesionA.do\" method=\"post\">\n");
+      out.write("        <form action=\"Login.do\" method=\"post\">\n");
       out.write("            <section class=\"vh-100\" background=\"\">\n");
       out.write("                <div class=\"container py-5 h-100\" >\n");
       out.write("                    <div class=\"row d-flex justify-content-center align-items-center h-100\">\n");
@@ -71,7 +71,7 @@ public final class InicioSesion_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\n");
       out.write("\n");
       out.write("                                    <div class=\"form-outline mb-4\">\n");
-      out.write("                                        <input name=\"txtEmail\" style=\"background: transparent;border: 1; color: white;\" type=\"email\" id=\"typeEmailX-2\" class=\"form-control form-control-lg\" placeholder=\"Ingrese su Email\"/>\n");
+      out.write("                                        <input name=\"txtEmail\" style=\"background: transparent;border: 1; color: white;\" type=\"Email\" id=\"typeEmailX-2\" class=\"form-control form-control-lg\" placeholder=\"Ingrese su Email\"/>\n");
       out.write("                                        <label class=\"form-label\" for=\"typeEmailX-2\">Gmail</label>\n");
       out.write("                                    </div>\n");
       out.write("\n");

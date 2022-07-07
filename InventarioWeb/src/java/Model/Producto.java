@@ -13,7 +13,11 @@ public class Producto {
     private Categoria categoria;
     
    
-
+    
+    public Producto() {
+        this.nom_producto = "";
+        this.categoria = new Categoria();
+    }
     public Producto(int id_producto) {
         this.id_producto = 0;
         
@@ -34,8 +38,7 @@ public class Producto {
     
     
 
-    public Producto() {
-    }
+    
     
     public int getId_producto() {
         return id_producto;

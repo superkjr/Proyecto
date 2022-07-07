@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fe4476a4-cd1f-4f8c-924e-12dccb814294">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tb_producto.`id_producto` AS tb_producto_id_producto,
+     tb_producto.`nom_producto` AS tb_producto_nom_producto,
+     tb_producto.`stock` AS tb_producto_stock,
+     tb_producto.`precio` AS tb_producto_precio,
+     tb_producto.`unidad_de_medida` AS tb_producto_unidad_de_medida,
+     tb_producto.`estado_producto` AS tb_producto_estado_producto,
+     tb_producto.`categoria` AS tb_producto_categoria
+FROM
+     `tb_producto` tb_producto]]>
+	</queryString>
+	<field name="tb_producto_id_producto" class="java.lang.Integer"/>
+	<field name="tb_producto_nom_producto" class="java.lang.String"/>
+	<field name="tb_producto_stock" class="java.math.BigDecimal"/>
+	<field name="tb_producto_precio" class="java.math.BigDecimal"/>
+	<field name="tb_producto_unidad_de_medida" class="java.lang.String"/>
+	<field name="tb_producto_estado_producto" class="java.lang.Boolean"/>
+	<field name="tb_producto_categoria" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="61824dec-20cb-46d5-8006-1b333b6bf48f"/>
+				<imageExpression><![CDATA["leaf_banner_red.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="8de881d6-c7d5-4bd5-9796-e9836fe1e0e5"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Reporte]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="397ca1a0-7db0-44cd-bf26-da952ffbfbcf"/>
+				<text><![CDATA[Productos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="540a8b19-37cc-4c46-a2f6-5078856690b9"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="79" height="15" uuid="44b07ec3-18ab-4bae-9991-8ef6bcba34bc"/>
+				<text><![CDATA[tb_producto_id_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="79" y="19" width="79" height="15" uuid="8f5555f0-b855-4f87-8440-cdca27080303"/>
+				<text><![CDATA[tb_producto_nom_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="158" y="19" width="79" height="15" uuid="02ab612d-9167-408b-80f2-b32bc5bc75a2"/>
+				<text><![CDATA[tb_producto_stock]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="237" y="19" width="79" height="15" uuid="2f75e499-6c64-4e9b-8d00-897ec27bbd87"/>
+				<text><![CDATA[tb_producto_precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="19" width="79" height="15" uuid="9b602ff6-98df-4c65-b9a7-57d0ce506170"/>
+				<text><![CDATA[tb_producto_unidad_de_medida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="395" y="19" width="79" height="15" uuid="56af17d2-8da5-4ffb-8287-9f7135cbe9f5"/>
+				<text><![CDATA[tb_producto_estado_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="19" width="79" height="15" uuid="a0916cd3-54f7-4d0c-b4a2-3c97aff9b0ed"/>
+				<text><![CDATA[tb_producto_categoria]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="26ed8214-e062-441f-a41e-1fc9a336e897"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="79" height="15" uuid="f66eea58-81b4-4172-a25b-f84ac3173027"/>
+				<textFieldExpression><![CDATA[$F{tb_producto_id_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="79" y="0" width="79" height="15" uuid="37ce8713-41d9-48c2-9ed9-40c7b47af951"/>
+				<textFieldExpression><![CDATA[$F{tb_producto_nom_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="158" y="0" width="79" height="15" uuid="4c7fa43b-aed5-4cfc-a044-db1eca9a7d86"/>
+				<textFieldExpression><![CDATA[$F{tb_producto_stock}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="237" y="0" width="79" height="15" uuid="7bbc966e-a04b-45f0-964b-f9853cb3397b"/>
+				<textFieldExpression><![CDATA[$F{tb_producto_precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="316" y="0" width="79" height="15" uuid="b5b57f02-834f-4458-98e1-631df240c9ab"/>
+				<textFieldExpression><![CDATA[$F{tb_producto_unidad_de_medida}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="395" y="0" width="79" height="15" uuid="df1f7e10-35a1-49b8-8e74-b65b20de8623"/>
+				<textFieldExpression><![CDATA[$F{tb_producto_estado_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="474" y="0" width="79" height="15" uuid="b89c2339-ba35-4064-813d-68c7e89ba313"/>
+				<textFieldExpression><![CDATA[$F{tb_producto_categoria}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="f72389c0-e01d-490b-a7b6-faf6c8739ca9"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="bd1c5a5e-e8d8-4fb1-b88a-f47f33d7344a"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="6ed2d01f-0d6d-4dbb-957c-90e070f3a071"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="91fe0880-6be9-4217-9153-d7b33eb4859a"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

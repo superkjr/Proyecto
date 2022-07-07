@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-07-2022 a las 21:45:15
+-- Tiempo de generación: 07-07-2022 a las 05:03:22
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -40,8 +40,7 @@ CREATE TABLE `tb_categoria` (
 --
 
 INSERT INTO `tb_categoria` (`id_categoria`, `nom_categoria`, `estado_categoria`) VALUES
-(1, 'Armando El pro ', 1),
-(2, 'Producto O', 1);
+(2, 'Armando', 3);
 
 -- --------------------------------------------------------
 
@@ -68,7 +67,8 @@ INSERT INTO `tb_producto` (`id_producto`, `nom_producto`, `stock`, `precio`, `un
 (2, 'Armndo', '2.34', '2.32', 'Liba', 9, NULL),
 (3, 'Pollo', '2.88', '5.87', 'Peso', 1, NULL),
 (4, 'POLLO', '5.43', '6.70', 'Libra', 1, NULL),
-(5, 'Arroz', '1.30', '9.80', 'Libra', 1, NULL);
+(5, 'Arroz', '1.30', '9.80', 'Libra', 1, NULL),
+(6, 'Bad bunny', '7.45', '4.45', '5.45', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -78,29 +78,24 @@ INSERT INTO `tb_producto` (`id_producto`, `nom_producto`, `stock`, `precio`, `un
 
 CREATE TABLE `tb_usuario` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `apellido` varchar(50) NOT NULL,
-  `usuario` varchar(20) NOT NULL,
-  `correo` varchar(50) NOT NULL,
-  `clave` varchar(10) NOT NULL,
-  `estado` int(11) NOT NULL,
-  `pregunta` varchar(60) NOT NULL,
-  `respuesta` varchar(60) NOT NULL,
-  `tipo` int(11) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `nombre` varchar(45) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `usuario` varchar(40) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `correo` varchar(60) COLLATE latin1_spanish_ci NOT NULL,
+  `clave` varchar(150) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT NULL,
+  `tipo` tinyint(1) DEFAULT NULL,
+  `pregunta` varchar(65) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `respuesta` varchar(40) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `fecha_registro` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `apellido` varchar(45) CHARACTER SET utf8mb4 DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `tb_usuario`
 --
 
-INSERT INTO `tb_usuario` (`id`, `nombre`, `apellido`, `usuario`, `correo`, `clave`, `estado`, `pregunta`, `respuesta`, `tipo`, `fecha`) VALUES
-(1, 'Armado', 'Minero', 'minero_armando', 'minerocarlos28@gmail.com', '1234', 1, 'Cuantos Anios?', '15', 1, '2022-07-02 23:51:19'),
-(2, 'Armado', 'Minero', 'minero_armando', 'minerocarlos28@gmail.com', '1234', 1, 'Cuantos Anios?', '15', 1, '2022-07-02 23:51:19'),
-(3, 'Armado', 'Minero', 'minero_armando', 'minerocarlos28@gmail.com', '1234', 1, 'Cuantos Anios?', '15', 1, '2022-07-02 23:52:39'),
-(4, 'Armado', 'Minero', 'minero_armando', 'minerocarlos28@gmail.com', '1234', 1, 'Cuantos Anios?', '15', 1, '2022-07-02 23:52:39'),
-(5, 'Armado', 'Minero', 'minero_armando', 'minerocarlos28@gmail.com', '1234', 1, 'Cuantos Anios?', '15', 1, '2022-07-02 23:53:06'),
-(6, 'Armado', 'Minero', 'minero_armando', 'minerocarlos28@gmail.com', '1234', 1, 'Cuantos Anios?', '15', 1, '2022-07-02 23:53:06');
+INSERT INTO `tb_usuario` (`id`, `nombre`, `usuario`, `correo`, `clave`, `estado`, `tipo`, `pregunta`, `respuesta`, `fecha_registro`, `apellido`) VALUES
+(1, 'Armando', 'Armando_22', 'minero@gmail.com', '123', 1, 12, 'Hola?', 'laks', '2022-07-06 16:31:09', 'minero');
 
 --
 -- Índices para tablas volcadas
@@ -139,13 +134,13 @@ ALTER TABLE `tb_categoria`
 -- AUTO_INCREMENT de la tabla `tb_producto`
 --
 ALTER TABLE `tb_producto`
-  MODIFY `id_producto` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_producto` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_usuario`
 --
 ALTER TABLE `tb_usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
